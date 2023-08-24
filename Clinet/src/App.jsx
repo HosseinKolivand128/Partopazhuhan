@@ -87,13 +87,8 @@ const navLinks = [
 
   return (
     <div className="App">
-    {/* <Nav/> */}
- {/* <DropdownMenu navLinkskData={navLinks}/> */}
- {/* <ThemeProvider theme={theme}> */}
- {/* <Responsive> */}
-
- <NavBar/>
-<Routes>
+    <NavBar/>
+      <Routes>
         <Route
           path="/PPK-100"
           element={

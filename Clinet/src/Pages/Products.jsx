@@ -16,7 +16,7 @@ const Products=({props})=>{
         };
         handleScrollTop();
     },[]);
-
+    console.log();
     const{name,description,others,pic,pdf}=props;
     // console.log(others.link.l2);
 
