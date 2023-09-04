@@ -43,9 +43,9 @@ return (
   justifyContent="center" xs={8} >
   <ul>
     {/**HOME */}
-    {/* <li key={0}>
-      <Link href='#'>HOME</Link>
-    </li> */}
+    <li key={0}>
+      <Link href='/'>صفحه اصلی</Link>
+    </li>
     {/**Products */}
     <li key={1} 
       onMouseEnter={(event) => subMenuOnMouseEnterHandler(0)}
