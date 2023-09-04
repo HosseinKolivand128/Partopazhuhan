@@ -42,10 +42,15 @@ return (
   <Grid item
   justifyContent="center" xs={8} >
   <ul>
-    {/**HOME */}
-    {/* <li key={0}>
-      <Link href='#'>HOME</Link>
-    </li> */}
+    {/* *HOME */}
+    <li key={0} className="li">
+      <Link href='/' style={{
+          
+            color:"#123c69",
+            fontSize:"13px"
+          
+        }}>صفحه اصلی</Link>
+    </li>
     {/**Products */}
     <li key={1} 
       onMouseEnter={(event) => subMenuOnMouseEnterHandler(0)}
