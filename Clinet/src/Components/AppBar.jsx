@@ -15,12 +15,15 @@ import { Box } from '@mui/material';
 import { useState } from "react";
 import { brown } from '@mui/material/colors';
 import { NavLink } from 'react-router-dom';
+import ItemsList from "./ItemsList"
 
 const AppNavBar=(props)=>{
     const navItems = ['Home', 'About', 'Contact'];
     const drawerWidth = 240;
     const { window } = props;
     const [mobileOpen, setMobileOpen] = useState(false);
+    const [showMenu, setShowMenu] = useState([]);
+
 
     const appBarStyle={
         position:"sticky",
@@ -33,6 +36,25 @@ const AppNavBar=(props)=>{
     const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
+    const subMenuOnMouseEnterHandler = (subMenuId) => {
+    setShowMenu((prev) => {
+      console.log(prev);
+      let arr = [...prev];
+      arr[subMenuId] = true;
+      return arr;
+    });
+  };
+
+    const subMenuOnMouseLeaveHandler = (subMenuId) => {
+    setShowMenu((prev) => {
+      let arr = [...prev];
+      // console.log(arr);
+      arr[subMenuId] = false;
+      return arr;
+    });
+  };
+
 
    const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -72,6 +94,7 @@ const AppNavBar=(props)=>{
               <Typography
                 variant="h6"
                 component="div"
+                fontFamily={"IranSans"}
                 sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
               >
                 پرتو پژوهان
@@ -79,48 +102,110 @@ const AppNavBar=(props)=>{
 
               <Box sx={{ display: { xs: 'none', sm: 'flex' },flexGrow:1.2 }}>
                 
-                  <Button key={0} sx={{ color: '#fff' }}>
-                            <NavLink style={{
-          
-            color:"#123c69",
-            fontSize:"13px"
-          
-        }} to='#'>محصولات</NavLink>
+                <Button 
+                key={0} 
+                sx={{ color: '#fff' }}
+                onMouseEnter={(event) => subMenuOnMouseEnterHandler(0)}
+                onMouseLeave={(event) => subMenuOnMouseLeaveHandler(0)}
+                >
+                  <NavLink style={{
+                    color:"#ad1457",
+                    fontSize:"1rem",
+                    fontWeight:"500"
+                  }} to='#'>محصولات</NavLink>
+                  <i className='arrow down'></i>
+                  {showMenu[0]&&(
+                    <ItemsList itemsInfo=
+                      {[
+                        {
+                          itemName:"PPK-100",
 
+                        },
+                        {itemName:"PPK-101",
+                      children:[
+                            {
+                              itemName:"subMenu1.1"
+                            },
+                            {
+                              itemName:"subMenu1.2",
+                              children:[
+                               { itemName:"submenu1.2.1"}
+                              ]
+                            },
+                            {
+                              itemName:"subMenu1.3"
+                            },
+                          ]},
+                        {itemName:"PPK-102"},
+                      ]}/>
+                    )}
                   </Button>
-                  <Button key={1} sx={{ color: '#fff' }}>
+
+                  <Button 
+                    key={1} 
+                    sx={{ color: '#fff' }}
+                    onMouseEnter={(event) => subMenuOnMouseEnterHandler(1)}
+                    onMouseLeave={(event) => subMenuOnMouseLeaveHandler(1)}
+                  >
+                  <NavLink style={{
+                    color:"#ad1457",
+                    fontSize:"1rem",
+                    fontWeight:"500"
+                  }} to='#'>نتایج</NavLink>
+                  <i className='arrow down'></i>
+                  {showMenu[1] &&
+                    <ItemsList itemsInfo=
+                      {[
+                        {
+                         itemName:"نتایج شگفت انگیز"
+                        },
+                        {
+                          itemName:"فیلم ها"
+                      },
+                    ]} />
+                  }
+                  </Button>
+                  <Button 
+                    key={2} 
+                    sx={{ color: '#fff' }}
+                    onMouseEnter={(event) => subMenuOnMouseEnterHandler(2)}
+                    onMouseLeave={(event) => subMenuOnMouseLeaveHandler(2)}
+                  >
                     <NavLink style={{
-          
-            color:"#123c69",
-            fontSize:"13px"
-          
-        }} to='#'>نتایج</NavLink>
+                    color:"#ad1457",
+                    fontSize:"1rem",
+                    fontWeight:"500"
+                    }} to='#'>سوالات متداول</NavLink>
                   </Button>
-                  <Button key={2} sx={{ color: '#fff' }}>
-                     <NavLink style={{
-          
-            color:"#123c69",
-            fontSize:"13px"
-          
-        }} to='#'>سوالات متداول</NavLink>
-                  </Button>
-                  <Button key={3} sx={{ color: '#fff' }}>
+                  <Button 
+                    key={3} 
+                    sx={{ color: '#fff' }}
+                    onMouseEnter={(event) => subMenuOnMouseEnterHandler(3)}
+                    onMouseLeave={(event) => subMenuOnMouseLeaveHandler(3)}
+                  >
                      <NavLink style={({isActive,isPending})=>{
-          return{
-           color:isActive?"#f94e6d":"#123c69",
-            fontSize:"13px"
-          }
-          
-        }} to='/AboutUs'>درباره ما</NavLink>
+                        return{
+                         color:isActive?"#f94e6d":"#123c69",
+                    color:"#ad1457",
+                    fontSize:"1rem",
+                    fontWeight:"500"
+                        }
+                      }} to='/AboutUs'>درباره ما</NavLink>
                   </Button>
-                  <Button key={4} sx={{ color: '#fff' }}>
+                  <Button 
+                    key={4} 
+                    sx={{ color: '#fff' }}
+                    onMouseEnter={(event) => subMenuOnMouseEnterHandler(4)}
+                    onMouseLeave={(event) => subMenuOnMouseLeaveHandler(4)}
+                  >
                     <NavLink style={({isActive,isPending})=>{
-          return{
-           color:isActive?"#f94e6d":"#123c69",
-            fontSize:"13px"
-          }
-          
-          }} to='/ContactUs'>تماس با ما</NavLink>
+                      return{
+                       color:isActive?"#f94e6d":"#123c69",
+                    color:"#ad1457",
+                    fontSize:"1rem",
+                    fontWeight:"500"
+                      }
+                    }} to='/ContactUs'>تماس با ما</NavLink>
                   </Button>                
               </Box>
             </Toolbar>
