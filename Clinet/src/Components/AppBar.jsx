@@ -30,6 +30,8 @@ const AppNavBar=(props)=>{
         top:0,
         width:"100%",
         backgroundColor:brown[200],
+        padding:"0px 0"
+        // height:"50px"
         // padding:"0px"
     }
 
@@ -95,16 +97,23 @@ const AppNavBar=(props)=>{
                 variant="h6"
                 component="div"
                 fontFamily={"IranSans"}
-                sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                sx={{ flexGrow: 0.9, display: { xs: 'none', sm: 'block' },margin:0,padding:0 }}
               >
-                پرتو پژوهان
+                <NavLink
+                  style={{
+                      color:"#fff",
+                    }}
+                  to='/'
+                >
+                  پرتو پژوهان
+                </NavLink>
               </Typography>
 
               <Box sx={{ display: { xs: 'none', sm: 'flex' },flexGrow:1.2 }}>
                 
                 <Button 
                 key={0} 
-                sx={{ color: '#fff' }}
+                sx={{ color: '#fff',mt:0,pt:0,pb:0,mb:0}}
                 onMouseEnter={(event) => subMenuOnMouseEnterHandler(0)}
                 onMouseLeave={(event) => subMenuOnMouseLeaveHandler(0)}
                 >
@@ -143,7 +152,7 @@ const AppNavBar=(props)=>{
 
                   <Button 
                     key={1} 
-                    sx={{ color: '#fff' }}
+                sx={{ color: '#fff',mt:0,pt:0,pb:0,mb:0}}
                     onMouseEnter={(event) => subMenuOnMouseEnterHandler(1)}
                     onMouseLeave={(event) => subMenuOnMouseLeaveHandler(1)}
                   >
@@ -167,7 +176,7 @@ const AppNavBar=(props)=>{
                   </Button>
                   <Button 
                     key={2} 
-                    sx={{ color: '#fff' }}
+                sx={{ color: '#fff',mt:0,pt:0,pb:0,mb:0}}
                     onMouseEnter={(event) => subMenuOnMouseEnterHandler(2)}
                     onMouseLeave={(event) => subMenuOnMouseLeaveHandler(2)}
                   >
@@ -179,7 +188,7 @@ const AppNavBar=(props)=>{
                   </Button>
                   <Button 
                     key={3} 
-                    sx={{ color: '#fff' }}
+                sx={{ color: '#fff',mt:0,pt:0,pb:0,mb:0}}
                     onMouseEnter={(event) => subMenuOnMouseEnterHandler(3)}
                     onMouseLeave={(event) => subMenuOnMouseLeaveHandler(3)}
                   >
@@ -194,7 +203,7 @@ const AppNavBar=(props)=>{
                   </Button>
                   <Button 
                     key={4} 
-                    sx={{ color: '#fff' }}
+                sx={{ color: '#fff',mt:0,pt:0,pb:0,mb:0}}
                     onMouseEnter={(event) => subMenuOnMouseEnterHandler(4)}
                     onMouseLeave={(event) => subMenuOnMouseLeaveHandler(4)}
                   >
