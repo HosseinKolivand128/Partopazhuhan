@@ -31,6 +31,7 @@
   width: 100px;
   height: 100px;
   cursor: pointer;
+  border-radius: 5px;
   transition: opacity 0.5s ease-in-out;
      animation: fade 2s;
 }
@@ -40,12 +41,20 @@
 }
 
 .main-image img {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 350px;
+  border-radius: 5px;
   object-fit: cover;
   animation: fade 2s;
 }
-
+.carousel-container{
+    /* border:"solid #f2f6ff 4px",borderRadius:"30px",backgroundColor:"white"
+     */
+     border:solid white 2px ;
+     border-radius: 5px;
+     background-color: whitesmoke;
+     padding: 2px;
+}
 @keyframes fade {
   from {
     opacity: 0;

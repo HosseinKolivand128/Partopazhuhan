@@ -42,7 +42,7 @@ const Carousel=({images}) => {
                 <img 
                 // style={style[]}
                 key={index}
-                src={pic3}
+                src={src}
                 alt={`${index+1}`}
                 onClick={()=>handleClick(index)}
                 className={currentImage === index ? style["active"] : ''}
@@ -95,7 +95,7 @@ const Products=({props})=>{
         handleScrollTop();
     },[]);
 
-    const{name,description,others,pic,pdf}=props;
+    const{name,description,others,images,pdf}=props;
 
     const navigate=useNavigate();
     const handlePageReload=(link)=>{
@@ -114,7 +114,7 @@ const Products=({props})=>{
 
     link.click();
   };
-  const images=[pic3,pic4]
+//   const images=[pic3,pic4]
     return(
         <main>
             <Container maxWidth="lg">
@@ -130,7 +130,7 @@ const Products=({props})=>{
                      <section style={{
                         // marginLeft:"180px"
                      }} >
-                        <div style={{border:"solid #f2f6ff 4px",borderRadius:"30px",backgroundColor:"white"}}>
+                        <div className={style["carousel-container"]}>
                             <Carousel images={images}/>
                         </div>
                      </section>
