@@ -40,8 +40,8 @@ const Products=({props})=>{
   };
 
     return(
-        <main>
-            <Container maxWidth="lg">
+        <main >
+            <Container maxWidth="lg" >
                 <section style={{
                      display:"flex",
                      justifyContent:"space-around",
