@@ -44,12 +44,7 @@ return (
   <ul>
     {/* *HOME */}
     <li key={0} className="li">
-      <Link href='/' style={{
-          
-            color:"#123c69",
-            fontSize:"13px"
-          
-        }}>صفحه اصلی</Link>
+      <Link href='/' >صفحه اصلی</Link>
     </li>
     {/**Products */}
     <li key={1} 
