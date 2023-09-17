@@ -32,6 +32,8 @@ import ppk101 from "./public/Documents/PPK-101.pdf"
 import ppk102 from "./public/Documents/PPK-102.pdf"
 import Contactus from './Pages/Contactus';
 import Aboutus from './Pages/Aboutus';
+import Resualts from './Pages/Resualts';
+
 function App() {
 const navLinks = [
     {
@@ -102,7 +104,7 @@ const navLinks = [
               p2:{name:"افزودنی آبگریزکننده کاهگل و بناهای تاریخی",pic:pic2},
               link:{l1:"/PPK-101",l2:"/PPK-102"}
             },
-            pic:pic3,
+           images:[pic3],
             pdf:ppk100
           }}/>
           }
@@ -119,7 +121,7 @@ const navLinks = [
               link:{l1:"/PPK-100",l2:"/PPK-102"}
 
             },
-            pic:pic6,
+            images:[pic6],
             pdf:ppk101
           }}/>
           }
@@ -136,7 +138,7 @@ const navLinks = [
               link:{l1:"/PPK-100",l2:"/PPK-101"}
 
             },
-            pic:pic2,
+            images:[pic2],
             pdf:ppk102
           }}/>
           }
@@ -157,6 +159,12 @@ const navLinks = [
           path="/AboutUs"
           element={
             <Aboutus/>
+          }
+        ></Route>
+         <Route
+          path="/Resualts"
+          element={
+            <Resualts/>
           }
         ></Route>
 
