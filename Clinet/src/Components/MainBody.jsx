@@ -34,8 +34,8 @@ padding:"30px",margin:"50px 0",
                      padding:"2px",
                      
                  }}>
-                     <h1 style={{fontSize:"x-large",color:"#ac3b61",textAlign:"center",padding:"5px 0"}}>
-                         افزودنی های نفوذناپذیر کننده(نام شرکت)
+                     <h1 style={{fontSize:"x-large",color:"#ac3b61",textAlign:"center",padding:"8px 0"}}>
+                         افزودنی های نفوذناپذیر پرتو پژوهان
                      </h1>
                      <p >
                          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque quisquam amet ut similique facilis excepturi nulla dignissimos delectus! Est voluptates possimus molestiae, corrupti quisquam dolorum. Cum eius fugiat non voluptatem?

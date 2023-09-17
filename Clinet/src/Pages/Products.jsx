@@ -97,6 +97,7 @@ const Products=({props})=>{
 
     const{name,description,others,images,pdf}=props;
 
+
     const navigate=useNavigate();
     const handlePageReload=(link)=>{
         navigate(link);
@@ -116,8 +117,8 @@ const Products=({props})=>{
   };
 //   const images=[pic3,pic4]
     return(
-        <main>
-            <Container maxWidth="lg">
+        <main >
+            <Container maxWidth="lg" >
                 <section style={{
                      display:"flex",
                      justifyContent:"space-around",
