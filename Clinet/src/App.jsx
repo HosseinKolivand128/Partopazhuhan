@@ -31,6 +31,8 @@ import ppk101 from "./public/Documents/PPK-101.pdf"
 import ppk102 from "./public/Documents/PPK-102.pdf"
 import Contactus from './Pages/Contactus';
 import Aboutus from './Pages/Aboutus';
+import Resualts from './Pages/Resualts';
+
 function App() {
 const navLinks = [
     {
@@ -160,6 +162,12 @@ const navLinks = [
           path="/AboutUs"
           element={
             <Aboutus/>
+          }
+        ></Route>
+         <Route
+          path="/Resualts"
+          element={
+            <Resualts/>
           }
         ></Route>
 

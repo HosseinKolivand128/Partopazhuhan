@@ -1,10 +1,88 @@
 import { Box, Button, Container,Card,CardActionArea,CardMedia,CardContent} from "@mui/material";
 import pic4 from "../public/Pictures/pic4.jpg"
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import pic3 from "../public/Pictures/pic3.jpg"
 import { useNavigate } from "react-router-dom";
-import { redirect } from "react-router-dom";
 import { useEffect } from "react";
+import React, { useRef, useState } from 'react';
 
+
+import style from '../Style/productCarousel.module.css'
+// Import Swiper React components
+
+const Carousel=({images}) => {
+      const [fade, setFade] = useState(false);
+    const[currentImage,setCurrentImage]=useState(0);
+    const handleClick=(index)=>{
+        setFade(true);
+        setTimeout(() => {
+            setCurrentImage(index);
+            setFade(false);
+        }, 0);
+  };
+    const handlePrev=()=>{
+        setFade(true);
+        setTimeout(() => {
+            setCurrentImage((prevImage)=>(prevImage===0?images.length-1:prevImage-1))
+            setFade(false);
+        }, 0);
+    }
+    const handleNext=()=>{
+        setFade(true);
+        setTimeout(() => {
+            setCurrentImage((prevImage)=>(prevImage===images.length-1?0:prevImage+1))
+            setFade(false);
+        }, 0);
+    }
+    const renderThumbs=()=>{
+        return images.map((src,index)=>{
+            console.log(src);
+            return(
+                <img 
+                // style={style[]}
+                key={index}
+                src={pic3}
+                alt={`${index+1}`}
+                onClick={()=>handleClick(index)}
+                className={currentImage === index ? style["active"] : ''}
+                />
+            )
+        });
+    };
+     const renderMainImage=()=>{
+        return(
+            <div className={style[`main-image${fade ? ' fade' : ''}`]}>
+                <img 
+                src={images[currentImage]}
+                alt={`${currentImage+1}`}
+                />
+            </div>
+        );
+     };
+     return(
+         <div className={style["gallery-carousel"]}>
+                {renderMainImage()}
+            <div className={style["navigation"]}>
+                <button 
+
+onClick={handlePrev}>
+                <ArrowForwardIosIcon/>
+                </button>
+                <div className={style["thumbs"]} 
+
+>
+                    {renderThumbs()}
+                </div>
+                <button 
+
+onClick={handleNext}>
+                    <ArrowBackIosNewIcon/>
+                </button>
+            </div>
+        </div>
+     );
+}
 
 const Products=({props})=>{
     useEffect(()=>{
@@ -18,7 +96,6 @@ const Products=({props})=>{
     },[]);
 
     const{name,description,others,pic,pdf}=props;
-    // console.log(others.link.l2);
 
     const navigate=useNavigate();
     const handlePageReload=(link)=>{
@@ -26,7 +103,6 @@ const Products=({props})=>{
         window.scrollTo({
                 top:0,
                 behavior:"smooth",
-                
         });
     }
     const downloadFile = (name,pdf) => {
@@ -38,7 +114,7 @@ const Products=({props})=>{
 
     link.click();
   };
-
+  const images=[pic3,pic4]
     return(
         <main>
             <Container maxWidth="lg">
@@ -55,7 +131,7 @@ const Products=({props})=>{
                         // marginLeft:"180px"
                      }} >
                         <div style={{border:"solid #f2f6ff 4px",borderRadius:"30px",backgroundColor:"white"}}>
-                            <img src={pic} alt={description} style={{borderRadius:"30px",height:"430px",width:"430px"}}></img>
+                            <Carousel images={images}/>
                         </div>
                      </section>
                      
