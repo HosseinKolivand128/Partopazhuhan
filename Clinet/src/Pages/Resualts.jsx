@@ -1,111 +1,73 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
-// import './style.css'
-import pic from '../assets/Landscape-Color.jpg'
-
-// import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
-
-// import "../Components/style.css"
 
 
 
-const Resualts=()=>{
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
-    return(<>
-     <Swiper
-        style={{
-          '--swiper-navigation-color': '#fff',
-          '--swiper-pagination-color': '#fff',
-        }}
-        loop={true}
-        spaceBetween={10}
-        navigation={true}
-        thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper2"
-      >
-        <SwiperSlide>
-          <img src={pic} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={pic} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={pic} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
-      </Swiper>
-      <Swiper
-        onSwiper={setThumbsSwiper}
-        loop={true}
-        spaceBetween={10}
-        slidesPerView={4}
-        freeMode={true}
-        watchSlidesProgress={true}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
-      </Swiper>
-    </>
-    )
-}
+// import React, { useEffect, useRef } from 'react';bb
 
-export default Resualts;
+// import style  from '../Style/productPagesStyles.module.css';
+
+// const Parallax = () => {
+//   const parallaxContainerRef=useRef(null);
+
+//    useEffect(() => {
+//     const parallaxEffect = () => {
+//       const parallaxContainer = parallaxContainerRef.current;
+//       const layers = parallaxContainer.getElementsByClassName('parallax-layer');
+
+//       const moveLayers = (scrollY) => {
+//         Array.from(layers).forEach(layer => {
+//           const depth = layer.getAttribute('data-depth');
+//           const moveY = -scrollY * depth;
+//           layer.style.transform = `translateY(${moveY}px)`;
+//         });
+//       };
+
+//       window.addEventListener('scroll', () => {
+//         const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+//         moveLayers(scrollY);
+//       });
+//     };
+
+//     if (parallaxContainerRef.current) {
+//       parallaxEffect();
+//     }
+//   }, []);
+
+
+  // useEffect(() => {
+  //   const parallaxEffect = () => {
+  //     const parallaxContainer = document.getElementById('parallax-container');
+  //     const layers = parallaxContainer.getElementsByClassName('parallax-layer');
+
+  //     const moveLayers = (scrollY) => {
+  //       Array.from(layers).forEach(layer => {
+  //         const depth = layer.getAttribute('data-depth');
+  //         const moveY = -scrollY * depth;
+  //         layer.style.transform = `translateY(${moveY}px)`;
+  //       });
+  //     };
+
+  //     window.addEventListener('scroll', () => {
+  //       const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  //       moveLayers(scrollY);
+  //     });
+  //   };
+
+  //   parallaxEffect();
+  // }, []);
+
+//   return (
+//     <div ref={parallaxContainerRef} id={style["parallax-container"]}>
+//       <div className={style["parallax-layer"]} data-depth="0.2">
+//         Content for first layer
+//       </div>
+//       <div className={style["parallax-layer"]} data-depth="0.4">
+//         Content for second layer
+//       </div>
+//       <div className={style["parallax-layer"]} data-depth="0.6">
+//         Content for third layer
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Parallax;
