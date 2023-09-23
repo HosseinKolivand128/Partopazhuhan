@@ -6,9 +6,6 @@ import React, { useRef, useState, useEffect } from 'react';
 
 import pic3 from "../public/Pictures/pic3.jpg"
 
-import gsap from "gsap";
-import{ScrollTrigger}from "gsap/all";
-
 
 
 import style from '../Style/productCarousel.module.css'
