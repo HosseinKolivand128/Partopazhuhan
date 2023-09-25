@@ -27,8 +27,7 @@ export default function Footer() {
               درباره ما
             </Typography>
             <Typography variant="body2" color="text.secondary" fontFamily="IranSans">
-              We are XYZ company, dedicated to providing the best service to our
-              customers.
+              شرکت پرتو پژوهان مستقر در پارک علمی غیاث الدین جمشید کاشانی واقع در شهر کاشان میباشد
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4} p={1}>
@@ -37,14 +36,24 @@ export default function Footer() {
             </Typography>
             <Box sx={{display:"flex", flexDirection:"column",justifyContent:"center",textAlign:"center"}}>
             <Typography variant="body2" color="text.secondary" fontFamily="IranSans">
-              123 Main Street, Anytown, USA
+              کاشان، بلوار نماز، میدان امیر به انتهای خیابان دانشگاه
             </Typography>
             <Typography variant="body2" color="text.secondary" fontFamily="IranSans">
               پست الکترونیک: info@example.com
             </Typography>
-            <Typography variant="body2" color="text.secondary" fontFamily="IranSans">
-              تلفن: +1 234 567 8901
-            </Typography>
+            <div style={{display:"flex",justifyContent:"center",alignItems:"center",gap:"20px"}}>
+              <Typography variant="body2" color="text.secondary" fontFamily="IranSans">
+                              تلفن: 
+              </Typography>
+              <div style={{display:"flex",flexDirection:"column"}}>
+                <Typography variant="body2" color="text.secondary" fontFamily="IranSans">
+                                0991-9302969
+                </Typography>
+                <Typography variant="body2" color="text.secondary" fontFamily="IranSans">
+                                031-55913043 
+                </Typography>
+              </div>
+            </div>
             </Box>
           </Grid>
           <Grid item xs={12} sm={4} p={1}>
