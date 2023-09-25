@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import{Link,NavLink}from "react-router-dom"
-// import './itemMenu.css';
+import style from '../Style/Navbar.module.css';
 const Lists=(props)=>{
 const { itemsInfo } = props;
 // console.log(itemsInfo);
@@ -28,12 +28,12 @@ const { itemsInfo } = props;
     });
   };
 return(
-  <ul className="dropdown-menu IRANSans" >
+  <ul className={style["dropdown-menu"]} >
     {
       itemsInfo.map((element,i)=>{
         return(
             <li 
-              className="sub-li"
+              className={style["sub-li"]}
               style={{
                 padding:"0 10px"
                 // width:"max-content",
