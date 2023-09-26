@@ -26,10 +26,10 @@ const AppNavBar=(props)=>{
 
 
     const appBarStyle={
-        position:"sticky",
+        position:"relative",
         top:0,
         width:"100%",
-        backgroundColor:brown[200],
+        backgroundColor:brown[100],
         padding:"0px 0"
         // height:"50px"
         // padding:"0px"

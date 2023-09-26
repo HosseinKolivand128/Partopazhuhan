@@ -1,0 +1,30 @@
+.intro-pic{
+    /* font-size: ; */
+}
+.products{
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
+    justify-content: space-around;
+}
+@media (width<=475px) {
+    .intro{
+        /* text-align: center; */
+        display: flex;
+        flex-flow: nowrap column;
+        align-items: center;
+        justify-content: center;
+    }
+    .intro h2{
+        width: 70vw !important;
+    }
+    .intro p{
+        width: 70vw !important;
+    }
+    .intro-pic{
+        height: 70vw !important;
+    }
+    .products{
+    margin: 0 50%;
+    }
+}

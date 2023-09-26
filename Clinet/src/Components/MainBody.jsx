@@ -8,18 +8,20 @@ import pic7 from "../public/Pictures/pic7.jpg"
 import pic9 from "../public/Pictures/pic9.jpg"
 import pic8 from "../public/Pictures/pic8.jpg"
 import pic10 from "../public/Pictures/pic10.jpg"
+import style from "../Style/homePage.module.css"
 import { useEffect } from "react";
 const Body = () => {
     const navigate=useNavigate();
 
     
   return (
-     <main style={{ }}>
+     <main>
          {/** Article section including picture and a text box with description */}
          <section style={{
              display:"flex",
              justifyContent:"center",
-padding:"30px",margin:"50px 0",
+             padding:"30px",
+             margin:"10px 0",
              alignItems:"center",
              flexWrap:"wrap",
              backgroundColor:"#eee2dc"
@@ -27,24 +29,21 @@ padding:"30px",margin:"50px 0",
              <section style={{
                 margin:"20px"
              }} >
-                 <Box sx={{
-                     maxWidth:"700px",
-                    //  backgroundColor: '#5be1cb',
-                     borderRadius:"5px",
-                     padding:"2px",
-                     
+                 <Box className={style["intro"]} sx={{
+                     maxWidth:"50vw",                     
+                       
                  }}>
-                     <h1 style={{fontSize:"x-large",color:"#ac3b61",textAlign:"center",padding:"8px 0"}}>
+                     <Typography variant="h2" sx={{textAlign:"justify-all",fontWeight:"400",fontSize:"x-large",fontFamily:"IranSans",color:"#ac3b61",minWidth:"58vw",margin:"10px 0"}}>
                          افزودنی های نفوذناپذیر پرتو پژوهان
-                     </h1>
-                     <p >
+                     </Typography>
+                     <Typography fontFamily={"IranSans"} sx={{textAlign:"justify",width:"45vw",margin:"5px"}} >
                          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque quisquam amet ut similique facilis excepturi nulla dignissimos delectus! Est voluptates possimus molestiae, corrupti quisquam dolorum. Cum eius fugiat non voluptatem?
-                     </p>
+                     </Typography>
                  </Box>
              </section>
              <section  style={{ margin:"10px"}} >
                 <div>
-                    <img src={pic4} style={{borderRadius:"10px",height:"430px"}}></img>
+                    <img className={style["intro-pic"]} src={pic4} style={{borderRadius:"10px",height:"430px"}}></img>
                 </div>
              </section>
          </section>
@@ -52,26 +51,17 @@ padding:"30px",margin:"50px 0",
 
          {/** Four parts for showing productions */}
          {/*@TODO SEPARATE ITS COMPONENT */}
-         <section style={{padding:"50px 0"}}>
-            <Box sx={{ padding:"20px 0",textAlign:"center",display:"flex",flexDirection:"column",alignItems:"center",color:'#123c69'}}>
+         <section style={{padding:"70px 0"}}>
+            <Box sx={{ padding:"10px 0",textAlign:"center",display:"flex",flexDirection:"column",alignItems:"center",color:'#123c69'}}>
                      <h2 >
                          نوع محصول شما چیست؟
                      </h2>
-                     <div style={{borderBottom: "2px",width:"500px",	borderTop: "0",	borderStyle:"solid",borderImage: "linear-gradient(to bottom, #181818, #eee, #181818)" }}></div>
+                     {/* <div style={{borderBottom: "2px",width:"500px",	borderTop: "0",	borderStyle:"solid",borderImage: "linear-gradient(to bottom, #181818, #eee, #181818)" }}></div> */}
              </Box>
-            <section style={{
-             display:"flex",
-             justifyContent:"space-around",
-             // margin:"0px 90px",
-             padding:"40px 240px",
-             alignItems:"center",
-             flexWrap:"wrap",
-             
-            }}>
+            <section className={style["products"]}>
                 <section style={{
                     padding:"5px"
                 }}>
-
                     <Box sx={{
                      width:"250px",
                      height:"250px",
@@ -163,6 +153,7 @@ padding:"30px",margin:"50px 0",
                         </div>
                     </Box>
                 </section>
+
                 <section style={{
                     padding:"5px"
                 }}>
