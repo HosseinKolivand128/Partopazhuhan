@@ -249,14 +249,14 @@ const Products=({props})=>{
                     <section style={{marginBottom:"60px"}}>
                         <div >
                             <Container sx={{display:"flex",alignContent:"center",justifyContent:"space-around",flexFlow:"wrap"}}>
-                            <Card sx={{ width: "350px",height:"350px",marginTop:"20px" }} onClick={() => handlePageReload(others.link.l1)}>
+                            <Card sx={{ width: "32%",height:"32%",marginTop:"20px" }} onClick={() => handlePageReload(others.link.l1)}>
                                 <CardActionArea>
                                   <CardMedia
                                     component="img"
-                                    height="250"
+                                    
                                     image={`${others.p1.pic}`}
                                     alt="impermeable additive"
-                                    // sx={{top:"500px"}}
+                                    sx={{height:"250px",width:"100%"}}
                                   />
                                   <CardContent sx={{ marginTop:"20px",textAlign:"center"}}>
                                       <span>
@@ -269,15 +269,13 @@ const Products=({props})=>{
                                 </CardActionArea>
                             </Card>
                             
-                            <Card sx={{ minWidth: "350px",height:"350px",marginTop:"20px" }} onClick={() => handlePageReload(others.link.l2)}>
+                            <Card sx={{ width: "32%",height:"32%",marginTop:"20px" }} onClick={() => handlePageReload(others.link.l2)}>
                               <CardActionArea>
                                 <CardMedia
                                   component="img"
-                                  height="250"
                                   image={`${others.p2.pic}`}
                                   alt="impermeable additive"
-                                //   sx={{top:"50px"}}
-                                  
+                                  sx={{height:"250px",width:"100%"}}
                                 />
                                 <CardContent sx={{ marginTop:"20px",textAlign:"center"}}>
                                     <span>
