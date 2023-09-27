@@ -5,7 +5,7 @@ nav {
   z-index: 1;
   font-family: "IranSans";
   font-weight: 800;
-  position: relative;
+  position: static;
 
 }
 
