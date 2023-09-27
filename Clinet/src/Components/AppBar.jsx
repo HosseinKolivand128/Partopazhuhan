@@ -101,7 +101,7 @@ const AppNavBar=(props)=>{
               >
                 <NavLink
                   style={{
-                      color:"#fff",
+                      color:"#123c69",
                     }}
                   to='/'
                 >
@@ -157,7 +157,8 @@ const AppNavBar=(props)=>{
                     onMouseLeave={(event) => subMenuOnMouseLeaveHandler(1)}
                   >
                   <NavLink style={{
-                    color:"#ad1457",
+                    // color:"#ad1457",
+                    color:"#123c69",
                     fontSize:"1rem",
                     fontWeight:"500"
                   }} to='#'>نتایج</NavLink>
@@ -181,7 +182,8 @@ const AppNavBar=(props)=>{
                     onMouseLeave={(event) => subMenuOnMouseLeaveHandler(2)}
                   >
                     <NavLink style={{
-                    color:"#ad1457",
+                    // color:"#ad1457",
+                    color:"#123c69",
                     fontSize:"1rem",
                     fontWeight:"500"
                     }} to='#'>سوالات متداول</NavLink>
@@ -194,8 +196,8 @@ const AppNavBar=(props)=>{
                   >
                      <NavLink style={({isActive,isPending})=>{
                         return{
-                         color:isActive?"#f94e6d":"#123c69",
-                    color:"#ad1457",
+                         color:isActive?"#f94e6d":"#ad1457",
+                    color:"#123c69",
                     fontSize:"1rem",
                     fontWeight:"500"
                         }
@@ -209,8 +211,8 @@ const AppNavBar=(props)=>{
                   >
                     <NavLink style={({isActive,isPending})=>{
                       return{
-                       color:isActive?"#f94e6d":"#123c69",
-                    color:"#ad1457",
+                       color:isActive?"#f94e6d":"#ad1457",
+                    // color:"#123c69",
                     fontSize:"1rem",
                     fontWeight:"500"
                       }

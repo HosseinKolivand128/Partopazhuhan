@@ -23,6 +23,7 @@ ul {
 
 .sub-li:hover{
   background-color:#fad338 ;
+  
   /* border-radius:; */
 }
 a {
@@ -37,11 +38,14 @@ a {
   top: 100% ;
   background-color: #f7f7f8;
   position:absolute;
+  width: fit-content;
 }
 
 .dropdown-menu li {
+  display: block;
   position: relative;
-  padding:0 0 10px 0;
+  padding:0 10px;
+  min-width:max-content ;
 }
 
 .dropdown-menu li:hover > .submenu {

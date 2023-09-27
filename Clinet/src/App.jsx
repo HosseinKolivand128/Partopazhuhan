@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Routes, Route } from "react-router-dom";
-import NavBar from "./Components/NavBar"
+// import NavBar from "./Components/NavBar"
 import AppBar from "./Components/AppBar"
 import './App.css'
 import Products from "./Pages/Products"

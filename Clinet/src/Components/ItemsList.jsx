@@ -34,13 +34,7 @@ return(
         return(
             <li 
               className={style["sub-li"]}
-              style={{
-                padding:"0 10px"
-                // width:"max-content",
-                // display:"flex",
-                // alignItems:"baseline",
-                // alignContent:"center"
-              }}
+              
               >
                 
                 <NavLink to={`/${element.itemName}`.replace(" ","_")} style={({isActive,isPending})=>{
