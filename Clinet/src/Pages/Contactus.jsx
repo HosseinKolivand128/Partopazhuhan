@@ -37,7 +37,7 @@ const Contactus=()=>{
                 </section>
 
                 <section style={{padding:"20px",margin:"20px"}}>
-                    <Container maxWidth="lg" sx={{display:"flex",justifyContent:"space-around",alignItems:"baseline"}}>
+                    <Container maxWidth="lg" sx={{display:"flex",justifyContent:"space-around",alignItems:"baseline",flexFlow:"wrap row"}}>
                         <Card sx={{ maxWidth: 350,minWidth:290,margin:"10px",boxShadow:"-2px 5px 30px gray" }}>
                             <CardContent sx={{display:"flex", flexDirection:"row",alignItems:"baseline",justifyContent:"start"}}>
                               <Box sx={{borderRadius:"50%",minWidth:"3em",height:"3em",backgroundColor:"orange"}}>
@@ -117,18 +117,18 @@ const Contactus=()=>{
                         <form action="/" method="post" name="فرم تماس">
                             {/* <label for=""></label> */}
                             <div >
-                                <div style={{display:"flex", flexDirection:"row",justifyContent:"center",alignItems:"center", margin:"5px"}}>
+                                <div style={{display:"flex",flexFlow:"wrap row",justifyContent:"center",alignItems:"center", margin:"5px"}}>
                                     <input  style={{lineHeight:"1.4",fontSize:"12px",minHeight:"10px",padding:"5px 15px",fontFamily:"IranSans",margin:"5px"}} type="text" placeholder="نام و نام خانوادگی"></input>
 
                                     <input  style={{lineHeight:"1.4",fontSize:"12px",minHeight:"10px",padding:"5px 15px",fontFamily:"IranSans",margin:"5px"}} type="text" placeholder="آدرس ایمیل"></input>
                                 </div>
-                                <div style={{display:"flex", flexDirection:"row",justifyContent:"center",alignItems:"center" , margin:"5px"}}>
+                                <div style={{display:"flex",flexFlow:"wrap row",justifyContent:"center",alignItems:"center" , margin:"5px"}}>
                                     <input  style={{lineHeight:"1.4",fontSize:"12px",minHeight:"10px",padding:"5px 15px",fontFamily:"IranSans",margin:"5px"}} type="text" placeholder="شماره تماس"></input>
 
                                     <input  style={{lineHeight:"1.4",fontSize:"12px",minHeight:"10px",padding:"5px 15px",fontFamily:"IranSans",margin:"5px"}} type="text" placeholder="موضوع"></input>
                                 </div>
                                 <div>
-                                    <textarea style={{lineHeight:"1.4",fontSize:"15px",minHeight:"60px",padding:"5px 15px",fontFamily:"IranSans",margin:"5px"}} placeholder="پیغام"></textarea>
+                                    <textarea style={{lineHeight:"1.4",fontSize:"15px",height:"20vw",width:"60vw",padding:"5px 15px",fontFamily:"IranSans"}} placeholder="پیغام"></textarea>
                                 </div>
                             </div>
                             <Button  variant="contained" color="error" style={{margin:"5px",fontFamily:"IranSans"}} type="submit" >ارسال</Button>
