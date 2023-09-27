@@ -51,7 +51,7 @@ const Body = () => {
 
          {/** Four parts for showing productions */}
          {/*@TODO SEPARATE ITS COMPONENT */}
-         <section style={{padding:"70px 0"}}>
+         <section style={{padding:"70px 0",margin:"50px 0"}}>
             <Box sx={{ padding:"10px 0",textAlign:"center",display:"flex",flexDirection:"column",alignItems:"center",color:'#123c69'}}>
                      <h2 >
                          نوع محصول شما چیست؟
@@ -208,9 +208,10 @@ const Body = () => {
          <Box sx={{
             textAlign:"center",
             padding:"20px 0",
-            display:"flex",
-            flexDirection:"column",
-            alignItems:"center",color:'#123c69'
+            // display:"flex",
+            // flexDirection:"column",
+            // alignItems:"center",
+            color:'#123c69'
          }}>
             <h2>
                 فواید مصرف نانوذرات
@@ -229,9 +230,9 @@ const Body = () => {
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  height="200"
                   image={`${pic9}`}
                   alt="Water color on impermeable additive"
+                  className={style["productCard"]}
                 />
                 <CardContent sx={{ marginTop:"20px",textAlign:"center" ,fontFamily:"IRANSans",fontSize:"15px"}}>
                     <p style={{alignText:"center",lineHeight:"2em",color:"#123c69" }}>
@@ -244,9 +245,9 @@ const Body = () => {
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  height="200"
                   image={`${pic8}`}
                   alt="Water on the impermeable product"
+                  className={style["productCard"]}
                 />
                 <CardContent sx={{ marginTop:"20px",textAlign:"center",fontFamily:"IRANSans",fontSize:"15px" }}>
                     <p style={{alignText:"center",lineHeight:"2em",color:"#123c69" }}>
@@ -259,10 +260,10 @@ const Body = () => {
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  height="200"
                   image={`${pic10}`}
                   alt="impermeable additive"
-                  sx={{top:"500px"}}
+                  className={style["productCard"]}
+
                 />
                 <CardContent sx={{ marginTop:"20px",textAlign:"center",fontFamily:"IRANSans",fontSize:"15px"}}>
                     <span>

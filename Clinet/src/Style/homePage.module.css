@@ -7,6 +7,13 @@
     align-items: center;
     justify-content: space-around;
 }
+.productCard{
+    height:200px ;
+}
+.productCard>div p{
+    font-weight: 200;
+    background-color: red !important;
+}
 @media (width<=475px) {
     .intro{
         /* text-align: center; */
