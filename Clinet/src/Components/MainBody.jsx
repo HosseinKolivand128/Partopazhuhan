@@ -36,7 +36,7 @@ const Body = () => {
                      <Typography variant="h2" sx={{textAlign:"justify-all",fontWeight:"400",fontSize:"x-large",fontFamily:"IranSans",color:"#ac3b61",minWidth:"58vw",margin:"10px 0"}}>
                          افزودنی های نفوذناپذیر پرتو پژوهان
                      </Typography>
-                     <Typography fontFamily={"IranSans"} sx={{textAlign:"justify",width:"45vw",margin:"5px"}} >
+                     <Typography fontFamily={"IranSans"} sx={{textAlign:"justify",width:"50vw",margin:"5px"}} >
                          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque quisquam amet ut similique facilis excepturi nulla dignissimos delectus! Est voluptates possimus molestiae, corrupti quisquam dolorum. Cum eius fugiat non voluptatem?
                      </Typography>
                  </Box>

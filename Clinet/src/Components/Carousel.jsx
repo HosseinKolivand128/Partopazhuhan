@@ -92,12 +92,14 @@ const Carousel = ({autoplaySpeed }) => {
       </div>
       <div className={style["navigation"]}>
         <div>
-        <button onClick={goToPrevSlide} className={style["prev"]}>
-          <ArrowForwardIosIcon/>
-        </button>
-        <button onClick={goToNextSlide} className={style["next"]}>
-          <ArrowBackIosNewIcon/>
-        </button>
+          <div>
+            <button onClick={goToPrevSlide} className={style["prev"]}>
+              <ArrowForwardIosIcon/>
+            </button>
+            <button onClick={goToNextSlide} className={style["next"]}>
+              <ArrowBackIosNewIcon/>
+            </button>
+          </div>
         </div>
       </div>
     </div>

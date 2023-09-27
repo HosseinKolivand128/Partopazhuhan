@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
   position: static;
-  width: 92%; /*Set the desired width*/
+  width: 93%; /*Set the desired width*/
   height: 42vw; /* Set the desired height */
   overflow: hidden;
   margin:3px auto;
@@ -38,29 +38,36 @@ img{
 }
 
 .navigation {
-    /* display: flex;
+    /* display: flex; 
     align-items: center;
-    justify-content: center; */
+    justify-content: center;  */
   position: absolute;
   /* gap: 50px; */
   /* bottom: 0px; */
   /* top: 50%; */
-  left: 50%;
-  transform: translateX(-50%);
+  /* left: 80%; */
+  /* transform: translateX(-20%); */
 }
-/* .navigation div{
+.navigation div{
+  width: 99vw;
+  /* width: 400%; */
+  /* margin: 0 0 0 10px; */
+  /* text-align: center; */
+}
+.navigation div div{
   display: flex;
-  justify-content: space-around;
-  background-color: rebeccapurple;
-} */
-.prev{
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .prev{
   position: relative;
   left: 46vw;
 }
 .next{
   position: relative;
   right: 46vw;
-}
+} */
 .prev,
 .next {
   padding: 10px;
@@ -72,4 +79,10 @@ img{
 }
 
 
- 
+ @media (width<=475) {
+  .carousel-container{
+    background-color: red;
+    width: 90vw ;
+    height: 5000px !important;
+  }
+ }
