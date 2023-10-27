@@ -9,10 +9,12 @@ import pic9 from "../public/Pictures/pic9.jpg"
 import pic8 from "../public/Pictures/pic8.jpg"
 import pic10 from "../public/Pictures/pic10.jpg"
 import style from "../Style/homePage.module.css"
+import Carousel from "./Carousell"
+
 import { useEffect } from "react";
 const Body = () => {
     const navigate=useNavigate();
-
+    const images=[]
     
   return (
      <main>
@@ -21,7 +23,7 @@ const Body = () => {
              display:"flex",
              justifyContent:"center",
              padding:"30px",
-             margin:"10px 0",
+            //  margin:"10px 0",
              alignItems:"center",
              flexWrap:"wrap",
              backgroundColor:"#eee2dc"
@@ -43,7 +45,8 @@ const Body = () => {
              </section>
              <section  style={{ margin:"10px"}} >
                 <div>
-                    <img className={style["intro-pic"]} src={pic4} style={{borderRadius:"10px",height:"430px"}}></img>
+                    <Carousel images={[pic4,pic3,pic6]}/>
+                    {/* <img className={style["intro-pic"]} src={pic4} style={{borderRadius:"10px",height:"430px"}}></img> */}
                 </div>
              </section>
          </section>

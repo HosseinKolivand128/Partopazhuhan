@@ -21,7 +21,7 @@ return(
 <>
 {/* <Carousel/> */}
 {/* @TODO: GET product images from api */}
-<Carousel slides={[pic1,pic2,pic5]} autoplaySpeed={5000} />
+{/* <Carousel slides={[pic1,pic2,pic5]} autoplaySpeed={5000} /> */}
 <Body/>
 </>
 )
