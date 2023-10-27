@@ -117,11 +117,14 @@ const AppNavBar=(props)=>{
                 onMouseEnter={(event) => subMenuOnMouseEnterHandler(0)}
                 onMouseLeave={(event) => subMenuOnMouseLeaveHandler(0)}
                 >
-                  <NavLink style={{
-                    color:"#ad1457",
+                  <NavLink style={({isActive,isPending})=>{
+                      return{
+                       color:"#123c69",
+                      // color:isPending?"#123c69":"white",
                     fontSize:"1rem",
                     fontWeight:"500"
-                  }} to='#'>محصولات</NavLink>
+                    }
+                    }} to="">محصولات</NavLink>
                   <i className='arrow down'></i>
                   {showMenu[0]&&(
                     <ItemsList itemsInfo=
@@ -156,12 +159,13 @@ const AppNavBar=(props)=>{
                     onMouseEnter={(event) => subMenuOnMouseEnterHandler(1)}
                     onMouseLeave={(event) => subMenuOnMouseLeaveHandler(1)}
                   >
-                  <NavLink style={{
-                    // color:"#ad1457",
+                  <NavLink style={({isActive,isPending})=>{
+                      return{
                     color:"#123c69",
                     fontSize:"1rem",
                     fontWeight:"500"
-                  }} to='#'>نتایج</NavLink>
+                      }
+                    }} to='#'>نتایج</NavLink>
                   <i className='arrow down'></i>
                   {showMenu[1] &&
                     <ItemsList itemsInfo=
@@ -181,11 +185,12 @@ const AppNavBar=(props)=>{
                     onMouseEnter={(event) => subMenuOnMouseEnterHandler(2)}
                     onMouseLeave={(event) => subMenuOnMouseLeaveHandler(2)}
                   >
-                    <NavLink style={{
-                    // color:"#ad1457",
+                    <NavLink style={({isActive,isPending})=>{
+                      return{
                     color:"#123c69",
                     fontSize:"1rem",
                     fontWeight:"500"
+                      }
                     }} to='#'>سوالات متداول</NavLink>
                   </Button>
                   <Button 
@@ -196,8 +201,8 @@ const AppNavBar=(props)=>{
                   >
                      <NavLink style={({isActive,isPending})=>{
                         return{
-                         color:isActive?"#f94e6d":"#ad1457",
-                    color:"#123c69",
+                       color:isActive?"#ad1457":"#123c69",
+                    // color:"#123c69",
                     fontSize:"1rem",
                     fontWeight:"500"
                         }
@@ -211,7 +216,7 @@ const AppNavBar=(props)=>{
                   >
                     <NavLink style={({isActive,isPending})=>{
                       return{
-                       color:isActive?"#f94e6d":"#ad1457",
+                       color:isActive?"#ad1457":"#123c69",
                     // color:"#123c69",
                     fontSize:"1rem",
                     fontWeight:"500"
