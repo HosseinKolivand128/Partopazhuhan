@@ -38,7 +38,7 @@ const Contactus=()=>{
 
                 <section style={{padding:"20px",margin:"20px"}}>
                     <Container maxWidth="lg" sx={{display:"flex",justifyContent:"space-around",alignItems:"baseline",flexFlow:"wrap row"}}>
-                        <Card sx={{ maxWidth: 350,minWidth:290,margin:"10px",boxShadow:"-2px 5px 30px gray" }}>
+                        <Card sx={{ maxWidth: 350,minWidth:320,margin:"10px",boxShadow:"-2px 5px 30px gray" }}>
                             <CardContent sx={{display:"flex", flexDirection:"row",alignItems:"baseline",justifyContent:"start"}}>
                               <Box sx={{borderRadius:"50%",minWidth:"3em",height:"3em",backgroundColor:"orange"}}>
                                 <PhoneEnabledIcon  sx={{
@@ -68,8 +68,8 @@ const Contactus=()=>{
                               <Button size="small">Learn More</Button>
                             </CardActions> */}
                         </Card>
-                        <Card sx={{ maxWidth: 350,minWidth:290,margin:"10px",boxShadow:"-2px 5px 30px gray" }}>
-                            <CardContent sx={{display:"flex", flexDirection:"row",alignItems:"baseline",justifyContent:"start"}}>
+                        <Card sx={{ maxWidth: 350,minWidth:320,margin:"10px",boxShadow:"-2px 5px 30px gray" }}>
+                            <CardContent sx={{display:"flex",flexDirection:"row",alignItems:"baseline",justifyContent:"start"}}>
                               <Box sx={{borderRadius:"50%",minWidth:"3em",height:"3em",backgroundColor:"orange"}}>
                                 <LocationOnIcon sx={{
                                     color:"white",
@@ -85,14 +85,15 @@ const Contactus=()=>{
                                 <h2 style={{fontWeight:"600"}}>آدرس</h2>
                                 <Typography variant="p" color="text.secondary" fontFamily="IranSans">
                                     کاشان، بلوار نماز، میدان امیر به انتهای خیابان دانشگاه
-                                </Typography>                              </Box>
+                                </Typography>
+                              </Box>
 
                             </CardContent>
                             {/* <CardActions>
                               <Button size="small">Learn More</Button>
                             </CardActions> */}
                         </Card>
-                        <Card sx={{ maxWidth: 350,minWidth:290,margin:"10px",boxShadow:"-2px 5px 30px gray" }}>
+                        <Card sx={{ maxWidth: 350,minWidth:320,margin:"10px",boxShadow:"-2px 5px 30px gray" }}>
                             <CardContent sx={{display:"flex", flexDirection:"row",alignItems:"baseline",justifyContent:"start"}}>
                               <Box sx={{borderRadius:"50%",minWidth:"3em",height:"3em",backgroundColor:"orange"}}>
                                 <EmailIcon sx={{
