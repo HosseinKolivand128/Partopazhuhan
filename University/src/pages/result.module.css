@@ -1,0 +1,51 @@
+.heading{
+    color: crimson;
+}
+
+.resualt-content{
+    position: relative;
+    background-color: white;
+    top: -25px;
+    z-index: index 2;;
+    /* min-height: 500px; */
+}
+
+.about-main{
+    min-height: 400px;
+}
+.about-desc{
+    text-align: justify;
+}
+.bi{
+    color: orange;
+}
+.cbody{
+    min-height: 30rem;
+}
+
+video{
+    height: 500px;
+}
+@media (width>360px)and (width<576px) {
+  
+    video{
+        width: 400px;
+    
+    }
+}
+@media (width>=576px)and (width<992px) {
+  
+    video{
+        width: 600px;
+    
+    }
+}
+@media (width>=992px)and (width<1922px) {
+  .resualt-content{
+    /* height: 600px; */
+  }
+    video{
+        width: 800px;
+    
+    }
+}

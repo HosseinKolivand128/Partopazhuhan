@@ -1,0 +1,16 @@
+.ftitles{
+    font-weight: 600;
+}
+.numbers p{
+     margin: 2px;
+}
+footer{
+    box-shadow: 0px -10px 20px gray;
+    background-color: #e9ecef ;
+    height: 100%;
+    padding: 15px 0;
+
+}
+footer p{
+    margin: 1px;
+}
