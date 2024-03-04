@@ -11,7 +11,6 @@ node_modules
 dist
 dist-ssr
 video
-PDF
 *.local
 
 # Editor directories and files
