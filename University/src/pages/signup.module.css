@@ -2,12 +2,23 @@
     width: 27%;
     min-width: 360px;
     min-height: 500px;
-    background-color: white;
+    background-color:transparent;
+    border: solid 2px white;
+    margin-top: 100px;
 }
 .login{
-    width: 80%;
+    width: 95%;
 }
 .input{
-    width:250px ;
-    /* min-width: 250px; */
+    width:300px ;
+    background-color: transparent;
+
+    border: none;
+    border-bottom: 2px solid white;
+
+}
+input:focus{
+    border-color: gold;
+    outline: none;
+    box-shadow: '0 0 5px rgba(0, 123, 255, 0.5)',
 }
