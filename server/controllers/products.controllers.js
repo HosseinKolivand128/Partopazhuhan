@@ -19,7 +19,8 @@ async function sendProduct(req, res) {
 }
 async function getProductByName(req, res) {
     try {
-        const product = await Products.findOne({ name: `(${req.params})` })
+        const { name } = req.params;
+        const product = await Products.findOne({ name: `(${name})` })
         res.json(product).status(201)
     } catch (error) {
         console.log(error);

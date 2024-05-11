@@ -3,14 +3,40 @@ import {Link} from "react-router-dom"
 import Navbar from '../components/navbar';
 import background from "../assets/images/Signup.jpg"
 import style from "./signup.module.css"
+import { useNavigate  } from "react-router-dom";
+import axios from 'axios';
+
 export default function Signup(){
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [cpassword, setCPassword] = useState('');
-    const handleLogin = () => {
-        // Implement login logic here
-        console.log('Logging in with:', username, password);
-    };
+    const [email, setEmail] = useState('');
+    const navigate = useNavigate();
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            if (password!==cpassword) {
+                alert("رمز عبور و تکرار آن یکسان نیستند")
+            }else{
+                const Data={
+                    username:username,
+                    password:password,
+                    email:email
+                }
+                const User=await axios.post("http://localhost:8000/createUser",Data);
+                if (User.status===201||User.statusText==="Created") {
+                    alert("کاربر با موفقیت ثبت نام شد!")
+                    navigate("/login")
+                }
+            }
+        } catch (error) {
+          console.error('Error adding recipe:', error);
+        }
+     };
+
+
 return(<>
     <Navbar/>
         <section className={``} style={{background: `url(${background})`, height:"750px"}}>
@@ -20,16 +46,27 @@ return(<>
                         <h2 className=''>حساب کاربری بسازید</h2>
                         <Link to="/login">حساب کاربری دارید؟</Link>
                     </div>
-                    <div className='d-flex flex-column align-items-center gap-3'>
+                    <form onSubmit={handleSubmit} className='d-flex flex-column align-items-center gap-3'>
                        <div className='d-flex flex-column gap-2'>
                             <label for="username" className='fs-5'>نام کاربری</label>
                             <input
                               className={`${style["input"]}`}
                               id='username'
                               type="text"
-                              placeholder="info@email"
+                              placeholder="..."
                               value={username}
                               onChange={(e) => setUsername(e.target.value)}
+                            />
+                       </div>
+                       <div className='d-flex flex-column gap-2'>
+                            <label for="email" className='fs-5'>ایمیل</label>
+                            <input
+                              className={`${style["input"]}`}
+                              id='email'
+                              type="email"
+                              placeholder="info@email.com"
+                              value={email}
+                              onChange={(e) => setEmail(e.target.value)}
                             />
                        </div>
                        <div className='d-flex flex-column gap-2'>
@@ -54,8 +91,9 @@ return(<>
                               onChange={(e) => setCPassword(e.target.value)}
                             />
                        </div>
-                    </div>
-                    <button onClick={handleLogin} className={`${style["login"]} btn btn-success fs-4`}>ثبت نام</button>
+
+                    <button className={`${style["login"]} btn btn-success fs-4`}>ثبت نام</button>
+                    </form>
                 </div>
             </section>
         </section>
