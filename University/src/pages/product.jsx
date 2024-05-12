@@ -44,7 +44,7 @@ export default function Product() {
   }
   if (!Product) {
     // If product is null, render a loading indicator
-    return <div style={{textAlign:"center"}}>Loading...</div>;
+    return <div style={{textAlign:"center",color:"purple",fontWeight:"bold",fontSize:"20px",direction:"ltr",marginTop:"4%",height:"200px"}}>Loading...</div>;
   }
   // console.log(style["divider"]);
   return (

@@ -42,6 +42,7 @@ export default function Navbar() {
                   <Link
                     className="dropdown-item d-flex justify-content-start"
                     to="/products/PPK-100"
+                    target="_blank"
                   >
                     PPK-100
                   </Link>
@@ -50,6 +51,7 @@ export default function Navbar() {
                   <Link
                     className="dropdown-item d-flex justify-content-start"
                     to="/products/PPK-101"
+                    target="_blank"
                   >
                     PPK-101
                   </Link>
@@ -58,6 +60,7 @@ export default function Navbar() {
                   <Link
                     className="dropdown-item d-flex justify-content-start"
                     to="/products/PPK-102"
+                    target="_blank"
                   >
                     PPK-102
                   </Link>

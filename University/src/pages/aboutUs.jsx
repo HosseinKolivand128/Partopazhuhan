@@ -14,15 +14,7 @@ export default function AboutUs() {
                         شرکت پرتوپژوهان
                     </h2>
                     <p className={`${style["about-desc"]} mt-3 fw-medium fs-5`}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis consequuntur aliquam explicabo
-                        quas labore nemo, veniam nobis, pariatur maxime dolorum eaque recusandae eos consequatur adipisci. Eius
-                        repudiandae nesciunt corporis quas ea? Nesciunt tempora adipisci nisi ex beatae sunt reiciendis dolorum
-                        est rerum sequi deserunt nihil temporibus explicabo, non sapiente ratione quasi facilis perspiciatis
-                        quibusdam laborum nemo aliquam. Libero consequatur, quam architecto fuga, magni ab sed suscipit id
-                        cupiditate eius, asperiores expedita quasi ullam temporibus neque est eos? Vero velit hic laborum
-                        voluptas cum tempore, vitae aspernatur reiciendis nisi ipsum veritatis expedita quaerat ducimus
-                        molestias. Laudantium error voluptate eligendi at nesciunt!
-                    </p>
+با توجه به توسعه به کار گیری پرتو در امور مختلف پزشکی، صنعت و … همچنین مخرب بودن اثر پرتو های پر انرژی روی بدن و سلامتی افراد، حفاظ گذاری روی چشمه ها نقش حائز اهمیتی دارد. شرکت پرتوپژوهان با هدف طراحی و تولید محصولات حفاظ گذاری فعالیت خود را آغاز نمود و با بهره مندی از دانش و توان متخصصان علمی توانست طیفی از محصولات از جمله بلوک های ضد اشعه و افزودنی های آبگریز را طراحی و تولید نماید.                    </p>
                 </section>
             </main>
         </>

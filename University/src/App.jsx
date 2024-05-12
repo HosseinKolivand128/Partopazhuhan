@@ -14,7 +14,8 @@ import { Footer } from './components/footer'
 import NotFound from './pages/notFound.jsx'
 import Panel from './pages/Panel.jsx'
 import AddProduct from "./pages/AddP.jsx"
-import axios from 'axios'
+import Guide from "./pages/Guid.jsx"
+
 
 
 const router=createBrowserRouter([
@@ -247,11 +248,11 @@ const router=createBrowserRouter([
     element:<AddProduct ></AddProduct>,
     errorElement:<NotFound/>
   },
-  // {
-  //   path:"/guide",
-  //   element:<Guide/>,
-  //   errorElement:<NotFound/>
-  // },
+  {
+    path:"/guide",
+    element:<Guide/>,
+    errorElement:<NotFound/>
+  },
 ]);
 // const navRouter=createBrowserRouter([
 //   {
@@ -260,7 +261,6 @@ const router=createBrowserRouter([
 //   }
 // ])
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
