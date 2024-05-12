@@ -2,28 +2,64 @@ import { useParams } from "react-router-dom";
 import Carousel from "../components/carousel";
 import Navbar from "../components/navbar";
 import style from "./product.module.css";
+import axios from "axios";
 
-export default function Product({ props }) {
-  // const params=useParams();
+
+import { useEffect, useState } from "react";
+
+export default function Product() {
+  const {name}=useParams();
+  const [Product,setProduct]=useState(null);
+
+  const getData=async()=>{
+    try {
+      const response=await axios.get(`http://localhost:8000/products/${name}`);
+      if (response.data!==null) {
+        const {data}={...response}
+        return data;
+      }else{
+        console.log("not found data");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+    useEffect(()=>{
+    const fetchData=async ()=>{
+      const data =await getData();
+      setProduct(data)
+    };
+    fetchData();
+  },[])
+
+  // getData().then((data)=>{
+  //   setProduct({...data})
+  // })
+
+
   function productUsage(usages) {
     return usages.map((item) => {
       return <li>{item}</li>;
     });
   }
-  console.log(style["divider"]);
+  if (!Product) {
+    // If product is null, render a loading indicator
+    return <div style={{textAlign:"center",color:"purple",fontWeight:"bold",fontSize:"20px",direction:"ltr",marginTop:"4%",height:"200px"}}>Loading...</div>;
+  }
+  // console.log(style["divider"]);
   return (
     <>
     <Navbar/>
-      <main>
+     <main>
         {/* <section className="container-lg banner"> */}
         <section className={`${style["banner"]} container-lg`}>
           <section className="d-flex flex-wrap-reverse flex-lg-nowrap flex-row justify-content-around align-items-center gap-5 ">
             <div className="text-center mt-2">
               <h1 className="text-primary-emphasis" id="productTitle">
-                {props.title}
+                {Product.title}
               </h1>
               <p className="fs-4 text-primary-emphasis mt-1" id="productName">
-                {props.name}
+                {Product.name}
               </p>
               <div className={`${style["divider"]}`}></div>
               {/* <p className="description fs-5 fw-medium" id="productDescription"> */}
@@ -31,10 +67,10 @@ export default function Product({ props }) {
                 className={`${style.description} fs-6 fw-medium`}
                 id="productDescription"
               >
-                {props.description}
+                {Product.description}
               </p>
             </div>
-            <Carousel images={props.images} style={{ width: "350px", height: "350px" }} />
+            <Carousel images={Product.image} style={{ width: "350px", height: "350px" }} />
           </section>
         </section>
         {/* <section className="p container-sm p-2 mt-5"> */}
@@ -44,7 +80,7 @@ export default function Product({ props }) {
           </p>
           <ul className="fs-5 fw-normal p-3" id="usageList">
             {/* <!-- //!Create Li for usages --> */}
-            {productUsage(props.usages)}
+            {productUsage(Product.usage)}
           </ul>
         </section>
 
@@ -56,12 +92,12 @@ export default function Product({ props }) {
             </summary>
             {/* <!-- //!How to use Desc --> */}
             <span className="fs-5 fw-medium title-way">روش اول:</span>
-            {props.instructions}
+            {Product.instructions}
           </details>
         </section>
         <section className="mb-5">
           <div className="text-center m-5 gap-3">
-            <a href={props.file} download={props.title}>
+            <a href={Product.file} download={Product.title}>
             <button type="button" className="btn btn-warning " id="file">
               دانلود بروشور
             </button>
@@ -127,6 +163,7 @@ export default function Product({ props }) {
         </section>
         <section>{/* for other products */}</section>
       </main>
+
     </>
   );
 }
